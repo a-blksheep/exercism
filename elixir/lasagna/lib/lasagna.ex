@@ -23,7 +23,7 @@ defmodule Lasagna do
 
   """
   def remaining_minutes_in_oven(minutes) do
-    @expected_minutes_in_oven - minutes
+    expected_minutes_in_oven() - minutes
   end
 
   @doc """
