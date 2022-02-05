@@ -44,7 +44,7 @@ defmodule FreelancerRates do
     iex> FreelancerRates.days_in_budget(2_000, 80, 11)
   """
   def days_in_budget(budget, hourly_rate, discount) do
-    (budget / daily_discounted_rate(hourly_rate, discount)) |> Float.floor()
+    (budget / daily_discounted_rate(hourly_rate, discount)) |> Float.floor(1)
   end
 
   defp daily_discounted_rate(hourly_rate, discount) do
